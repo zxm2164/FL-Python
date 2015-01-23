@@ -115,7 +115,7 @@ for line in txtFile:
         sleep(0.001)
         print char.encode("utf-8"),
 print "\n"
-print "Welcome to AutomaPy - an Automation Network Utility based on NMAP and Python"
+print "Welcome to FL Python - an Automation Network Utility based on NMAP and Python"
 sys.stdout.flush()
 sleep(1)
 print "Please run this with sudo or root priviledges!"
