@@ -47,10 +47,10 @@ from time import sleep
 #Scan Industrial Protocol ports with TCP and UDP
 def DeviceInfoScan(IP_Addr):
     #Define a dictionary for the industrial protocol ports
-    ProtocolDict = dict([("80","HTTP"),("502","MODBUS"),("802","MODBUS-SECURE"),("34962","PROFINET-RT-UNICAST"),("34963","PROFINET-RT-MULTICAST"),("34964","PROFINET-CONTEXT-MANAGER"),("2222","ETHERNET/IP-I/O"),("44818","ETHERNET/IP-MESSAGING"),("34980","ETHERCAT"),("4840","OPC-UA"),("4843","OPC-UA-OVER-SSL")])
+    ProtocolDict = dict([("20","FTP"),("69","TFTP"),("115","SFTP"),("23","TELNET"),("80","HTTP"),("502","MODBUS"),("802","MODBUS-SECURE"),("34962","PROFINET-RT-UNICAST"),("34963","PROFINET-RT-MULTICAST"),("34964","PROFINET-CONTEXT-MANAGER"),("2222","ETHERNET/IP-I/O"),("44818","ETHERNET/IP-MESSAGING"),("34980","ETHERCAT"),("4840","OPC-UA"),("4843","OPC-UA-OVER-SSL")])
     
     
-    PortScan = subprocess.Popen("nmap -sU -sS -p 80,502,802,34962,34963,34964,2222,44818,34980,4840,4843 %s" % IP_Addr, stdout=subprocess.PIPE, shell=True)
+    PortScan = subprocess.Popen("nmap -sU -sS -p 20,69,115,23,80,502,802,34962,34963,34964,2222,44818,34980,4840,4843 %s" % IP_Addr, stdout=subprocess.PIPE, shell=True)
     
     count = 0
 
